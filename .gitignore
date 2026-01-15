@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# Gemini/Claude artifacts (keep these local)
+.gemini/
