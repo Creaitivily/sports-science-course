@@ -1,24 +1,12 @@
-# Dependencies
-node_modules/
+# Ignore everything
+*
 
-# IDE
-.vscode/
-.idea/
+# Except the app folder
+!app/
+!app/**
 
-# OS Files
-.DS_Store
-Thumbs.db
+# And this gitignore
+!.gitignore
 
-# Logs
-*.log
-
-# Build outputs
-dist/
-build/
-
-# Environment files
-.env
-.env.local
-
-# Gemini/Claude artifacts (keep these local)
-.gemini/
+# Standard ignores within app
+app/node_modules/
