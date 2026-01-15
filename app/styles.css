@@ -2695,6 +2695,181 @@ body {
 }
 
 /* ============================================
+   VALUE LADDER EXPANDED
+   ============================================ */
+
+.value-ladder-section {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.ladder-tier-expanded {
+    margin-bottom: 48px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.ladder-tier-expanded.featured {
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.tier-header-expanded {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 28px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-subtle);
+    flex-wrap: wrap;
+}
+
+.tier-price-tag {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 10px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.tier-price-tag.free {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.tier-price-tag.low {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.tier-price-tag.mid {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1));
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.tier-price-tag.high {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1));
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.tier-price-tag.premium {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    border: none;
+}
+
+.tier-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.tier-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.goal-badge {
+    margin-left: auto;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+}
+
+.tier-ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 24px;
+}
+
+.idea-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    transition: var(--transition-base);
+}
+
+.idea-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.idea-number {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.idea-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding-left: 16px;
+}
+
+.idea-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.idea-platform,
+.idea-execution {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--accent-primary);
+    display: inline-block;
+}
+
+.idea-execution {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--success);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tier-header-expanded {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .goal-badge {
+        margin-left: 0;
+    }
+
+    .tier-ideas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
    ANIMATIONS
    ============================================ */
 
